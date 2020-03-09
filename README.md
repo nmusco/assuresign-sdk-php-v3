@@ -1,4 +1,4 @@
-# OpenAPIClient-php
+# assuresign-sdk-php-v3
 
 <h2>AssureSign DocumentNOW electronic signature APIs (envelopes and documents)</h2><h3>For DocumentNOW user and account management APIs, go to [Account API](https://account.assuresign.net/api/v3.6/account)</h3>
 
