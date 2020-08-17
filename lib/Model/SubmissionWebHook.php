@@ -163,21 +163,21 @@ class SubmissionWebHook implements ModelInterface, ArrayAccess
     }
 
     const TIMING_ENVELOPE_START = 'Envelope_Start';
-const TIMING_ENVELOPE_PRE_EXPIRE = 'Envelope_PreExpire';
-const TIMING_ENVELOPE_EXPIRE = 'Envelope_Expire';
-const TIMING_ENVELOPE_COMPLETE = 'Envelope_Complete';
-const TIMING_ENVELOPE_CANCEL = 'Envelope_Cancel';
-const TIMING_ENVELOPE_DECLINE = 'Envelope_Decline';
-const TIMING_SIGNER_FEEDBACK = 'Signer_Feedback';
-const TIMING_SIGNER_AUTH_FAILURE = 'Signer_Auth_Failure';
-const TIMING_SIGNER_KBA_START = 'Signer_Kba_Start';
-const TIMING_SIGNER_KBA_COMPLETE = 'Signer_Kba_Complete';
-const TIMING_STEP_START = 'Step_Start';
-const TIMING_STEP_COMPLETE = 'Step_Complete';
-const TIMING_ON_PAYMENT_APPROVED = 'On_Payment_Approved';
-const TIMING_ON_PAYMENT_DECLINED = 'On_Payment_Declined';
-const TIMING_ON_PAYMENT_REFUNDED = 'On_Payment_Refunded';
-const TIMING_ON_ENVELOPE_LANDING_VISIT = 'On_Envelope_Landing_Visit';
+    const TIMING_ENVELOPE_PRE_EXPIRE = 'Envelope_PreExpire';
+    const TIMING_ENVELOPE_EXPIRE = 'Envelope_Expire';
+    const TIMING_ENVELOPE_COMPLETE = 'Envelope_Complete';
+    const TIMING_ENVELOPE_CANCEL = 'Envelope_Cancel';
+    const TIMING_ENVELOPE_DECLINE = 'Envelope_Decline';
+    const TIMING_SIGNER_FEEDBACK = 'Signer_Feedback';
+    const TIMING_SIGNER_AUTH_FAILURE = 'Signer_Auth_Failure';
+    const TIMING_SIGNER_KBA_START = 'Signer_Kba_Start';
+    const TIMING_SIGNER_KBA_COMPLETE = 'Signer_Kba_Complete';
+    const TIMING_STEP_START = 'Step_Start';
+    const TIMING_STEP_COMPLETE = 'Step_Complete';
+    const TIMING_ON_PAYMENT_APPROVED = 'On_Payment_Approved';
+    const TIMING_ON_PAYMENT_DECLINED = 'On_Payment_Declined';
+    const TIMING_ON_PAYMENT_REFUNDED = 'On_Payment_Refunded';
+    const TIMING_ON_ENVELOPE_LANDING_VISIT = 'On_Envelope_Landing_Visit';
 
     /**
      * Gets allowable values of the enum
@@ -188,21 +188,22 @@ const TIMING_ON_ENVELOPE_LANDING_VISIT = 'On_Envelope_Landing_Visit';
     {
         return [
             self::TIMING_ENVELOPE_START,
-self::TIMING_ENVELOPE_PRE_EXPIRE,
-self::TIMING_ENVELOPE_EXPIRE,
-self::TIMING_ENVELOPE_COMPLETE,
-self::TIMING_ENVELOPE_CANCEL,
-self::TIMING_ENVELOPE_DECLINE,
-self::TIMING_SIGNER_FEEDBACK,
-self::TIMING_SIGNER_AUTH_FAILURE,
-self::TIMING_SIGNER_KBA_START,
-self::TIMING_SIGNER_KBA_COMPLETE,
-self::TIMING_STEP_START,
-self::TIMING_STEP_COMPLETE,
-self::TIMING_ON_PAYMENT_APPROVED,
-self::TIMING_ON_PAYMENT_DECLINED,
-self::TIMING_ON_PAYMENT_REFUNDED,
-self::TIMING_ON_ENVELOPE_LANDING_VISIT,        ];
+            self::TIMING_ENVELOPE_PRE_EXPIRE,
+            self::TIMING_ENVELOPE_EXPIRE,
+            self::TIMING_ENVELOPE_COMPLETE,
+            self::TIMING_ENVELOPE_CANCEL,
+            self::TIMING_ENVELOPE_DECLINE,
+            self::TIMING_SIGNER_FEEDBACK,
+            self::TIMING_SIGNER_AUTH_FAILURE,
+            self::TIMING_SIGNER_KBA_START,
+            self::TIMING_SIGNER_KBA_COMPLETE,
+            self::TIMING_STEP_START,
+            self::TIMING_STEP_COMPLETE,
+            self::TIMING_ON_PAYMENT_APPROVED,
+            self::TIMING_ON_PAYMENT_DECLINED,
+            self::TIMING_ON_PAYMENT_REFUNDED,
+            self::TIMING_ON_ENVELOPE_LANDING_VISIT,        
+        ];
     }
 
     /**

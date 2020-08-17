@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Field
  *
@@ -44,85 +45,87 @@ class Field implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'field';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'border_sides' => '\Nmusco\AssureSign\v3\Model\FieldBorderSides',
-'certified' => 'bool',
-'field_type' => 'string',
-'input_type' => 'string',
-'instructions' => 'string',
-'name' => 'string',
-'page_index' => 'int',
-'position' => '\Nmusco\AssureSign\v3\Model\Coordinate',
-'required' => 'bool',
-'hidden' => 'bool',
-'signer' => 'string',
-'size' => '\Nmusco\AssureSign\v3\Model\FieldSize',
-'source_group' => 'string',
-'tag' => 'string',
-'fixed_text' => 'string',
-'timing' => 'string',
-'options' => '\Nmusco\AssureSign\v3\Model\FieldOption[]',
-'multiple_choice_default_values' => 'string[]',
-'pen_color' => 'string',
-'signature_type' => 'string',
-'signature_style' => 'string',
-'font_decoration' => '\Nmusco\AssureSign\v3\Model\FieldFontDecoration',
-'font_name' => 'string',
-'font_size' => 'int',
-'horizontal_alignment' => 'string',
-'signer_input_type' => 'string',
-'vertical_alignment' => 'string',
-'word_wrap' => 'bool',
-'formatter_type' => 'string',
-'formatter_code' => 'string'    ];
+        'certified' => 'bool',
+        'field_type' => 'string',
+        'input_type' => 'string',
+        'instructions' => 'string',
+        'name' => 'string',
+        'page_index' => 'int',
+        'position' => '\Nmusco\AssureSign\v3\Model\Coordinate',
+        'required' => 'bool',
+        'hidden' => 'bool',
+        'signer' => 'string',
+        'size' => '\Nmusco\AssureSign\v3\Model\FieldSize',
+        'source_group' => 'string',
+        'tag' => 'string',
+        'fixed_text' => 'string',
+        'timing' => 'string',
+        'options' => '\Nmusco\AssureSign\v3\Model\FieldOption[]',
+        'multiple_choice_default_values' => 'string[]',
+        'pen_color' => 'string',
+        'signature_type' => 'string',
+        'signature_style' => 'string',
+        'font_decoration' => '\Nmusco\AssureSign\v3\Model\FieldFontDecoration',
+        'font_name' => 'string',
+        'font_size' => 'int',
+        'horizontal_alignment' => 'string',
+        'signer_input_type' => 'string',
+        'vertical_alignment' => 'string',
+        'word_wrap' => 'bool',
+        'formatter_type' => 'string',
+        'formatter_code' => 'string'
+    ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'border_sides' => null,
-'certified' => null,
-'field_type' => null,
-'input_type' => null,
-'instructions' => null,
-'name' => null,
-'page_index' => 'int32',
-'position' => null,
-'required' => null,
-'hidden' => null,
-'signer' => null,
-'size' => null,
-'source_group' => null,
-'tag' => null,
-'fixed_text' => null,
-'timing' => null,
-'options' => null,
-'multiple_choice_default_values' => null,
-'pen_color' => null,
-'signature_type' => null,
-'signature_style' => null,
-'font_decoration' => null,
-'font_name' => null,
-'font_size' => null,
-'horizontal_alignment' => null,
-'signer_input_type' => null,
-'vertical_alignment' => null,
-'word_wrap' => null,
-'formatter_type' => null,
-'formatter_code' => null    ];
+        'certified' => null,
+        'field_type' => null,
+        'input_type' => null,
+        'instructions' => null,
+        'name' => null,
+        'page_index' => 'int32',
+        'position' => null,
+        'required' => null,
+        'hidden' => null,
+        'signer' => null,
+        'size' => null,
+        'source_group' => null,
+        'tag' => null,
+        'fixed_text' => null,
+        'timing' => null,
+        'options' => null,
+        'multiple_choice_default_values' => null,
+        'pen_color' => null,
+        'signature_type' => null,
+        'signature_style' => null,
+        'font_decoration' => null,
+        'font_name' => null,
+        'font_size' => null,
+        'horizontal_alignment' => null,
+        'signer_input_type' => null,
+        'vertical_alignment' => null,
+        'word_wrap' => null,
+        'formatter_type' => null,
+        'formatter_code' => null
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -152,35 +155,36 @@ class Field implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'border_sides' => 'borderSides',
-'certified' => 'certified',
-'field_type' => 'fieldType',
-'input_type' => 'inputType',
-'instructions' => 'instructions',
-'name' => 'name',
-'page_index' => 'pageIndex',
-'position' => 'position',
-'required' => 'required',
-'hidden' => 'hidden',
-'signer' => 'signer',
-'size' => 'size',
-'source_group' => 'sourceGroup',
-'tag' => 'tag',
-'fixed_text' => 'fixedText',
-'timing' => 'timing',
-'options' => 'options',
-'multiple_choice_default_values' => 'multipleChoiceDefaultValues',
-'pen_color' => 'penColor',
-'signature_type' => 'signatureType',
-'signature_style' => 'signatureStyle',
-'font_decoration' => 'fontDecoration',
-'font_name' => 'fontName',
-'font_size' => 'fontSize',
-'horizontal_alignment' => 'horizontalAlignment',
-'signer_input_type' => 'signerInputType',
-'vertical_alignment' => 'verticalAlignment',
-'word_wrap' => 'wordWrap',
-'formatter_type' => 'formatterType',
-'formatter_code' => 'formatterCode'    ];
+        'certified' => 'certified',
+        'field_type' => 'fieldType',
+        'input_type' => 'inputType',
+        'instructions' => 'instructions',
+        'name' => 'name',
+        'page_index' => 'pageIndex',
+        'position' => 'position',
+        'required' => 'required',
+        'hidden' => 'hidden',
+        'signer' => 'signer',
+        'size' => 'size',
+        'source_group' => 'sourceGroup',
+        'tag' => 'tag',
+        'fixed_text' => 'fixedText',
+        'timing' => 'timing',
+        'options' => 'options',
+        'multiple_choice_default_values' => 'multipleChoiceDefaultValues',
+        'pen_color' => 'penColor',
+        'signature_type' => 'signatureType',
+        'signature_style' => 'signatureStyle',
+        'font_decoration' => 'fontDecoration',
+        'font_name' => 'fontName',
+        'font_size' => 'fontSize',
+        'horizontal_alignment' => 'horizontalAlignment',
+        'signer_input_type' => 'signerInputType',
+        'vertical_alignment' => 'verticalAlignment',
+        'word_wrap' => 'wordWrap',
+        'formatter_type' => 'formatterType',
+        'formatter_code' => 'formatterCode'
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -189,35 +193,36 @@ class Field implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'border_sides' => 'setBorderSides',
-'certified' => 'setCertified',
-'field_type' => 'setFieldType',
-'input_type' => 'setInputType',
-'instructions' => 'setInstructions',
-'name' => 'setName',
-'page_index' => 'setPageIndex',
-'position' => 'setPosition',
-'required' => 'setRequired',
-'hidden' => 'setHidden',
-'signer' => 'setSigner',
-'size' => 'setSize',
-'source_group' => 'setSourceGroup',
-'tag' => 'setTag',
-'fixed_text' => 'setFixedText',
-'timing' => 'setTiming',
-'options' => 'setOptions',
-'multiple_choice_default_values' => 'setMultipleChoiceDefaultValues',
-'pen_color' => 'setPenColor',
-'signature_type' => 'setSignatureType',
-'signature_style' => 'setSignatureStyle',
-'font_decoration' => 'setFontDecoration',
-'font_name' => 'setFontName',
-'font_size' => 'setFontSize',
-'horizontal_alignment' => 'setHorizontalAlignment',
-'signer_input_type' => 'setSignerInputType',
-'vertical_alignment' => 'setVerticalAlignment',
-'word_wrap' => 'setWordWrap',
-'formatter_type' => 'setFormatterType',
-'formatter_code' => 'setFormatterCode'    ];
+        'certified' => 'setCertified',
+        'field_type' => 'setFieldType',
+        'input_type' => 'setInputType',
+        'instructions' => 'setInstructions',
+        'name' => 'setName',
+        'page_index' => 'setPageIndex',
+        'position' => 'setPosition',
+        'required' => 'setRequired',
+        'hidden' => 'setHidden',
+        'signer' => 'setSigner',
+        'size' => 'setSize',
+        'source_group' => 'setSourceGroup',
+        'tag' => 'setTag',
+        'fixed_text' => 'setFixedText',
+        'timing' => 'setTiming',
+        'options' => 'setOptions',
+        'multiple_choice_default_values' => 'setMultipleChoiceDefaultValues',
+        'pen_color' => 'setPenColor',
+        'signature_type' => 'setSignatureType',
+        'signature_style' => 'setSignatureStyle',
+        'font_decoration' => 'setFontDecoration',
+        'font_name' => 'setFontName',
+        'font_size' => 'setFontSize',
+        'horizontal_alignment' => 'setHorizontalAlignment',
+        'signer_input_type' => 'setSignerInputType',
+        'vertical_alignment' => 'setVerticalAlignment',
+        'word_wrap' => 'setWordWrap',
+        'formatter_type' => 'setFormatterType',
+        'formatter_code' => 'setFormatterCode'
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -226,35 +231,36 @@ class Field implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'border_sides' => 'getBorderSides',
-'certified' => 'getCertified',
-'field_type' => 'getFieldType',
-'input_type' => 'getInputType',
-'instructions' => 'getInstructions',
-'name' => 'getName',
-'page_index' => 'getPageIndex',
-'position' => 'getPosition',
-'required' => 'getRequired',
-'hidden' => 'getHidden',
-'signer' => 'getSigner',
-'size' => 'getSize',
-'source_group' => 'getSourceGroup',
-'tag' => 'getTag',
-'fixed_text' => 'getFixedText',
-'timing' => 'getTiming',
-'options' => 'getOptions',
-'multiple_choice_default_values' => 'getMultipleChoiceDefaultValues',
-'pen_color' => 'getPenColor',
-'signature_type' => 'getSignatureType',
-'signature_style' => 'getSignatureStyle',
-'font_decoration' => 'getFontDecoration',
-'font_name' => 'getFontName',
-'font_size' => 'getFontSize',
-'horizontal_alignment' => 'getHorizontalAlignment',
-'signer_input_type' => 'getSignerInputType',
-'vertical_alignment' => 'getVerticalAlignment',
-'word_wrap' => 'getWordWrap',
-'formatter_type' => 'getFormatterType',
-'formatter_code' => 'getFormatterCode'    ];
+        'certified' => 'getCertified',
+        'field_type' => 'getFieldType',
+        'input_type' => 'getInputType',
+        'instructions' => 'getInstructions',
+        'name' => 'getName',
+        'page_index' => 'getPageIndex',
+        'position' => 'getPosition',
+        'required' => 'getRequired',
+        'hidden' => 'getHidden',
+        'signer' => 'getSigner',
+        'size' => 'getSize',
+        'source_group' => 'getSourceGroup',
+        'tag' => 'getTag',
+        'fixed_text' => 'getFixedText',
+        'timing' => 'getTiming',
+        'options' => 'getOptions',
+        'multiple_choice_default_values' => 'getMultipleChoiceDefaultValues',
+        'pen_color' => 'getPenColor',
+        'signature_type' => 'getSignatureType',
+        'signature_style' => 'getSignatureStyle',
+        'font_decoration' => 'getFontDecoration',
+        'font_name' => 'getFontName',
+        'font_size' => 'getFontSize',
+        'horizontal_alignment' => 'getHorizontalAlignment',
+        'signer_input_type' => 'getSignerInputType',
+        'vertical_alignment' => 'getVerticalAlignment',
+        'word_wrap' => 'getWordWrap',
+        'formatter_type' => 'getFormatterType',
+        'formatter_code' => 'getFormatterCode'
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -298,46 +304,46 @@ class Field implements ModelInterface, ArrayAccess
     }
 
     const FIELD_TYPE_TYPED = 'Typed';
-const FIELD_TYPE_SIGNATURE = 'Signature';
-const INPUT_TYPE_SIGNER = 'Signer';
-const INPUT_TYPE_FIXED = 'Fixed';
-const INPUT_TYPE_SIGNATORY = 'Signatory';
-const TIMING_START = 'On_Document_Start';
-const TIMING_COMPLETE = 'On_Document_Complete';
-const PEN_COLOR_BLACK = 'Black';
-const PEN_COLOR_BLUE = 'Blue';
-const SIGNATURE_TYPE_SIGNATURE = 'Signature';
-const SIGNATURE_TYPE_INITIALS = 'Initials';
-const SIGNATURE_STYLE_SELECTABLE = 'Selectable';
-const SIGNATURE_STYLE_DRAWN = 'Drawn';
-const SIGNATURE_STYLE_TYPED = 'Typed';
-const SIGNATURE_STYLE_CLASSIC = 'Classic';
-const FONT_NAME_ARIAL = 'Arial';
-const FONT_NAME_BRADLEY_HAND_ITC = 'Bradley_Hand_ITC';
-const FONT_NAME_BRUSH_SCRIPT_BT = 'Brush_Script_BT';
-const FONT_NAME_COURIER_NEW = 'Courier_New';
-const FONT_NAME_TIMES_NEW_ROMAN = 'Times_New_Roman';
-const FONT_NAME_MY_HANDWRITING = 'My_Handwriting';
-const FONT_NAME_OTTO = 'Otto';
-const HORIZONTAL_ALIGNMENT_LEFT = 'Left';
-const HORIZONTAL_ALIGNMENT_CENTER = 'Center';
-const HORIZONTAL_ALIGNMENT_RIGHT = 'Right';
-const SIGNER_INPUT_TYPE_FREE_TEXT = 'Free_Text';
-const SIGNER_INPUT_TYPE_PREFILL = 'Prefill';
-const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_TEXT = 'Multiple_Choice_Text';
-const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_GRAPHIC = 'Multiple_Choice_Graphic';
-const SIGNER_INPUT_TYPE_TIMESTAMP = 'Timestamp';
-const SIGNER_INPUT_TYPE_CUSTOM_VALIDATION = 'Custom_Validation';
-const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_RADIO = 'Multiple_Choice_Radio';
-const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_CHECKBOX = 'Multiple_Choice_Checkbox';
-const SIGNER_INPUT_TYPE_UNDEFINED = 'Undefined';
-const VERTICAL_ALIGNMENT_TOP = 'Top';
-const VERTICAL_ALIGNMENT_MIDDLE = 'Middle';
-const VERTICAL_ALIGNMENT_BOTTOM = 'Bottom';
-const FORMATTER_TYPE_ALPHANUMERIC = 'ALPHANUMERIC';
-const FORMATTER_TYPE_CREDITCARD = 'CREDITCARD';
-const FORMATTER_TYPE_SSN = 'SSN';
-const FORMATTER_TYPE_CUSTOM = 'CUSTOM';
+    const FIELD_TYPE_SIGNATURE = 'Signature';
+    const INPUT_TYPE_SIGNER = 'Signer';
+    const INPUT_TYPE_FIXED = 'Fixed';
+    const INPUT_TYPE_SIGNATORY = 'Signatory';
+    const TIMING_START = 'On_Document_Start';
+    const TIMING_COMPLETE = 'On_Document_Complete';
+    const PEN_COLOR_BLACK = 'Black';
+    const PEN_COLOR_BLUE = 'Blue';
+    const SIGNATURE_TYPE_SIGNATURE = 'Signature';
+    const SIGNATURE_TYPE_INITIALS = 'Initials';
+    const SIGNATURE_STYLE_SELECTABLE = 'Selectable';
+    const SIGNATURE_STYLE_DRAWN = 'Drawn';
+    const SIGNATURE_STYLE_TYPED = 'Typed';
+    const SIGNATURE_STYLE_CLASSIC = 'Classic';
+    const FONT_NAME_ARIAL = 'Arial';
+    const FONT_NAME_BRADLEY_HAND_ITC = 'Bradley_Hand_ITC';
+    const FONT_NAME_BRUSH_SCRIPT_BT = 'Brush_Script_BT';
+    const FONT_NAME_COURIER_NEW = 'Courier_New';
+    const FONT_NAME_TIMES_NEW_ROMAN = 'Times_New_Roman';
+    const FONT_NAME_MY_HANDWRITING = 'My_Handwriting';
+    const FONT_NAME_OTTO = 'Otto';
+    const HORIZONTAL_ALIGNMENT_LEFT = 'Left';
+    const HORIZONTAL_ALIGNMENT_CENTER = 'Center';
+    const HORIZONTAL_ALIGNMENT_RIGHT = 'Right';
+    const SIGNER_INPUT_TYPE_FREE_TEXT = 'Free_Text';
+    const SIGNER_INPUT_TYPE_PREFILL = 'Prefill';
+    const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_TEXT = 'Multiple_Choice_Text';
+    const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_GRAPHIC = 'Multiple_Choice_Graphic';
+    const SIGNER_INPUT_TYPE_TIMESTAMP = 'Timestamp';
+    const SIGNER_INPUT_TYPE_CUSTOM_VALIDATION = 'Custom_Validation';
+    const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_RADIO = 'Multiple_Choice_Radio';
+    const SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_CHECKBOX = 'Multiple_Choice_Checkbox';
+    const SIGNER_INPUT_TYPE_UNDEFINED = 'Undefined';
+    const VERTICAL_ALIGNMENT_TOP = 'Top';
+    const VERTICAL_ALIGNMENT_MIDDLE = 'Middle';
+    const VERTICAL_ALIGNMENT_BOTTOM = 'Bottom';
+    const FORMATTER_TYPE_ALPHANUMERIC = 'ALPHANUMERIC';
+    const FORMATTER_TYPE_CREDITCARD = 'CREDITCARD';
+    const FORMATTER_TYPE_SSN = 'SSN';
+    const FORMATTER_TYPE_CUSTOM = 'CUSTOM';
 
     /**
      * Gets allowable values of the enum
@@ -348,7 +354,8 @@ const FORMATTER_TYPE_CUSTOM = 'CUSTOM';
     {
         return [
             self::FIELD_TYPE_TYPED,
-self::FIELD_TYPE_SIGNATURE,        ];
+            self::FIELD_TYPE_SIGNATURE,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -359,8 +366,9 @@ self::FIELD_TYPE_SIGNATURE,        ];
     {
         return [
             self::INPUT_TYPE_SIGNER,
-self::INPUT_TYPE_FIXED,
-self::INPUT_TYPE_SIGNATORY,        ];
+            self::INPUT_TYPE_FIXED,
+            self::INPUT_TYPE_SIGNATORY,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -371,7 +379,8 @@ self::INPUT_TYPE_SIGNATORY,        ];
     {
         return [
             self::TIMING_START,
-self::TIMING_COMPLETE,        ];
+            self::TIMING_COMPLETE,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -382,7 +391,8 @@ self::TIMING_COMPLETE,        ];
     {
         return [
             self::PEN_COLOR_BLACK,
-self::PEN_COLOR_BLUE,        ];
+            self::PEN_COLOR_BLUE,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -393,7 +403,8 @@ self::PEN_COLOR_BLUE,        ];
     {
         return [
             self::SIGNATURE_TYPE_SIGNATURE,
-self::SIGNATURE_TYPE_INITIALS,        ];
+            self::SIGNATURE_TYPE_INITIALS,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -404,9 +415,10 @@ self::SIGNATURE_TYPE_INITIALS,        ];
     {
         return [
             self::SIGNATURE_STYLE_SELECTABLE,
-self::SIGNATURE_STYLE_DRAWN,
-self::SIGNATURE_STYLE_TYPED,
-self::SIGNATURE_STYLE_CLASSIC,        ];
+            self::SIGNATURE_STYLE_DRAWN,
+            self::SIGNATURE_STYLE_TYPED,
+            self::SIGNATURE_STYLE_CLASSIC,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -417,12 +429,13 @@ self::SIGNATURE_STYLE_CLASSIC,        ];
     {
         return [
             self::FONT_NAME_ARIAL,
-self::FONT_NAME_BRADLEY_HAND_ITC,
-self::FONT_NAME_BRUSH_SCRIPT_BT,
-self::FONT_NAME_COURIER_NEW,
-self::FONT_NAME_TIMES_NEW_ROMAN,
-self::FONT_NAME_MY_HANDWRITING,
-self::FONT_NAME_OTTO,        ];
+            self::FONT_NAME_BRADLEY_HAND_ITC,
+            self::FONT_NAME_BRUSH_SCRIPT_BT,
+            self::FONT_NAME_COURIER_NEW,
+            self::FONT_NAME_TIMES_NEW_ROMAN,
+            self::FONT_NAME_MY_HANDWRITING,
+            self::FONT_NAME_OTTO,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -433,8 +446,9 @@ self::FONT_NAME_OTTO,        ];
     {
         return [
             self::HORIZONTAL_ALIGNMENT_LEFT,
-self::HORIZONTAL_ALIGNMENT_CENTER,
-self::HORIZONTAL_ALIGNMENT_RIGHT,        ];
+            self::HORIZONTAL_ALIGNMENT_CENTER,
+            self::HORIZONTAL_ALIGNMENT_RIGHT,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -445,14 +459,15 @@ self::HORIZONTAL_ALIGNMENT_RIGHT,        ];
     {
         return [
             self::SIGNER_INPUT_TYPE_FREE_TEXT,
-self::SIGNER_INPUT_TYPE_PREFILL,
-self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_TEXT,
-self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_GRAPHIC,
-self::SIGNER_INPUT_TYPE_TIMESTAMP,
-self::SIGNER_INPUT_TYPE_CUSTOM_VALIDATION,
-self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_RADIO,
-self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_CHECKBOX,
-self::SIGNER_INPUT_TYPE_UNDEFINED,        ];
+            self::SIGNER_INPUT_TYPE_PREFILL,
+            self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_TEXT,
+            self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_GRAPHIC,
+            self::SIGNER_INPUT_TYPE_TIMESTAMP,
+            self::SIGNER_INPUT_TYPE_CUSTOM_VALIDATION,
+            self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_RADIO,
+            self::SIGNER_INPUT_TYPE_MULTIPLE_CHOICE_CHECKBOX,
+            self::SIGNER_INPUT_TYPE_UNDEFINED,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -463,8 +478,9 @@ self::SIGNER_INPUT_TYPE_UNDEFINED,        ];
     {
         return [
             self::VERTICAL_ALIGNMENT_TOP,
-self::VERTICAL_ALIGNMENT_MIDDLE,
-self::VERTICAL_ALIGNMENT_BOTTOM,        ];
+            self::VERTICAL_ALIGNMENT_MIDDLE,
+            self::VERTICAL_ALIGNMENT_BOTTOM,
+        ];
     }
     /**
      * Gets allowable values of the enum
@@ -475,9 +491,10 @@ self::VERTICAL_ALIGNMENT_BOTTOM,        ];
     {
         return [
             self::FORMATTER_TYPE_ALPHANUMERIC,
-self::FORMATTER_TYPE_CREDITCARD,
-self::FORMATTER_TYPE_SSN,
-self::FORMATTER_TYPE_CUSTOM,        ];
+            self::FORMATTER_TYPE_CREDITCARD,
+            self::FORMATTER_TYPE_SSN,
+            self::FORMATTER_TYPE_CUSTOM,
+        ];
     }
 
     /**
