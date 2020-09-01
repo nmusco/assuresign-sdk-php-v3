@@ -158,9 +158,9 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
     }
 
     const MESSAGE_TYPE_INFORMATION = 'information';
-const MESSAGE_TYPE_VERBOSE = 'verbose';
-const MESSAGE_TYPE_WARNING = 'warning';
-const MESSAGE_TYPE_ERROR = 'error';
+    const MESSAGE_TYPE_VERBOSE = 'verbose';
+    const MESSAGE_TYPE_WARNING = 'warning';
+    const MESSAGE_TYPE_ERROR = 'error';
 
     /**
      * Gets allowable values of the enum
@@ -171,9 +171,10 @@ const MESSAGE_TYPE_ERROR = 'error';
     {
         return [
             self::MESSAGE_TYPE_INFORMATION,
-self::MESSAGE_TYPE_VERBOSE,
-self::MESSAGE_TYPE_WARNING,
-self::MESSAGE_TYPE_ERROR,        ];
+            self::MESSAGE_TYPE_VERBOSE,
+            self::MESSAGE_TYPE_WARNING,
+            self::MESSAGE_TYPE_ERROR,        
+        ];
     }
 
     /**
