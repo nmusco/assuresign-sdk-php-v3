@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ResponseMessageDto
  *
@@ -44,29 +45,31 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'responseMessageDto';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'details' => 'string',
-'message_type' => 'string'    ];
+        'message_type' => 'string'
+    ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'details' => null,
-'message_type' => null    ];
+        'message_type' => null
+    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,7 +99,8 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'details' => 'details',
-'message_type' => 'messageType'    ];
+        'message_type' => 'messageType'
+    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,7 +109,8 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'details' => 'setDetails',
-'message_type' => 'setMessageType'    ];
+        'message_type' => 'setMessageType'
+    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,7 +119,8 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'details' => 'getDetails',
-'message_type' => 'getMessageType'    ];
+        'message_type' => 'getMessageType'
+    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -173,7 +179,7 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
             self::MESSAGE_TYPE_INFORMATION,
             self::MESSAGE_TYPE_VERBOSE,
             self::MESSAGE_TYPE_WARNING,
-            self::MESSAGE_TYPE_ERROR,        
+            self::MESSAGE_TYPE_ERROR,
         ];
     }
 
