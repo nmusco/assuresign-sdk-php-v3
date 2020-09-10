@@ -11,6 +11,7 @@ use Nmusco\AssureSign\v3\Api\SsoTokenApi;
 use Nmusco\AssureSign\v3\Api\SubmitApi;
 use Nmusco\AssureSign\v3\Api\TemplatesApi;
 use Nmusco\AssureSign\v3\Api\UsersApi;
+use Nmusco\AssureSign\v3\Api\WebhooksApi;
 use Nmusco\AssureSign\v3\Configuration;
 use Nmusco\AssureSign\v3\Provider\AssureSignAuthProvider;
 
@@ -250,6 +251,18 @@ class ApiClient
 		}
 
 		return $this->clients['UsersApi'];
+	}
+
+	public function getWebhooksApi() : WebhooksApi
+	{
+		if (!isset($this->clients['WebhooksApi'])) {
+			$client = $this->authProvider->getHttpClient();
+			$configuration = $this->getConfiguration();
+
+			$this->clients['WebhooksApi'] = new WebhooksApi($client, $configuration, null);
+		}
+
+		return $this->clients['WebhooksApi'];
 	}
 
 	private function getConfiguration() : Configuration
