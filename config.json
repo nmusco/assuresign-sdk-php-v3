@@ -1,0 +1,14 @@
+{
+	"sortParamsByRequiredFlag": true,
+	"ensureUniqueParams": true,
+	"allowUnicodeIdentifiers": false,
+	"variableNamingConvention": "snake_case",
+	"invokerPackage": "Nmusco\\AssureSign\\v3",
+	"packagePath": "assuresign-sdk-php-v3",
+	"composerVendorName": "nmusco",
+	"composerProjectName": "assuresign-sdk-php-v3",
+	"artifactVersion": "1.0.0",
+	"gitRepoId": "assuresign-sdk-php-v3",
+	"gitUserId": "nmusco",
+	"srcBasePath": "lib"
+}
