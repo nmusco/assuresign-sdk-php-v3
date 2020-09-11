@@ -174,12 +174,12 @@ class WebhookValidator implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const VALIDATOR_TYPE_STATUS_CODE = 'StatusCode';
-    const VALIDATOR_TYPE_BODY = 'Body';
-    const VALIDATOR_TYPE_X_PATH = 'XPath';
-    const VALIDATOR_CONDITION_EQUALS = 'Equals';
-    const VALIDATOR_CONDITION_CONTAINS = 'Contains';
-    const VALIDATOR_CONDITION_DOES_NOT_CONTAIN = 'DoesNotContain';
+    const VALIDATOR_TYPE_STATUS_CODE = 'statusCode';
+    const VALIDATOR_TYPE_BODY = 'body';
+    const VALIDATOR_TYPE_X_PATH = 'xPath';
+    const VALIDATOR_CONDITION_EQUALS = 'equals';
+    const VALIDATOR_CONDITION_CONTAINS = 'contains';
+    const VALIDATOR_CONDITION_DOES_NOT_CONTAIN = 'doesNotContain';
     
 
     

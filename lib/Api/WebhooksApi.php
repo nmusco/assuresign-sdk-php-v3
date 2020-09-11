@@ -38,6 +38,7 @@ use Nmusco\AssureSign\v3\ApiException;
 use Nmusco\AssureSign\v3\Configuration;
 use Nmusco\AssureSign\v3\HeaderSelector;
 use Nmusco\AssureSign\v3\ObjectSerializer;
+use Throwable;
 
 /**
  * WebhooksApi Class Doc Comment
@@ -206,7 +207,9 @@ class WebhooksApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
+        } catch (Throwable $e) {
+            $GLOBALS['log']->fatal($e->getMessage());
+            throw $e;
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -371,6 +374,7 @@ class WebhooksApi
             }
         }
 
+        $GLOBALS['log']->fatal("AssureSign: \r\n\r\n\r\n{$httpBody}\r\n\r\n\r\n");
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {

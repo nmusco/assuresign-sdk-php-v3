@@ -163,12 +163,11 @@ class ResponseMessageDto implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const MESSAGE_TYPE_INFORMATION = 'Information';
-    const MESSAGE_TYPE_VERBOSE = 'Verbose';
-    const MESSAGE_TYPE_WARNING = 'Warning';
-    const MESSAGE_TYPE_ERROR = 'Error';
+    const MESSAGE_TYPE_INFORMATION = 'information';
+    const MESSAGE_TYPE_VERBOSE = 'verbose';
+    const MESSAGE_TYPE_WARNING = 'warning';
+    const MESSAGE_TYPE_ERROR = 'error';
     
-
     
     /**
      * Gets allowable values of the enum

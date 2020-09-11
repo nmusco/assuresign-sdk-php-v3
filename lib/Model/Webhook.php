@@ -72,7 +72,8 @@ class Webhook implements ModelInterface, ArrayAccess
         'validators' => '\Nmusco\AssureSign\v3\Model\WebhookValidator[]',
         'response_values' => '\Nmusco\AssureSign\v3\Model\WebhookResponseValue[]',
         'notify_on_failure' => 'string',
-        'technical_contact_email_addresses' => 'string[]'
+        'technical_contact_email_addresses' => 'string[]',
+        'allowed_timing' => 'string'
     ];
 
     /**
@@ -95,7 +96,8 @@ class Webhook implements ModelInterface, ArrayAccess
         'validators' => null,
         'response_values' => null,
         'notify_on_failure' => null,
-        'technical_contact_email_addresses' => null
+        'technical_contact_email_addresses' => null,
+        'allowed_timing' => null
     ];
 
     /**
@@ -139,7 +141,8 @@ class Webhook implements ModelInterface, ArrayAccess
         'validators' => 'validators',
         'response_values' => 'responseValues',
         'notify_on_failure' => 'notifyOnFailure',
-        'technical_contact_email_addresses' => 'technicalContactEmailAddresses'
+        'technical_contact_email_addresses' => 'technicalContactEmailAddresses',
+        'allowed_timing' => 'allowedTiming'
     ];
 
     /**
@@ -162,7 +165,8 @@ class Webhook implements ModelInterface, ArrayAccess
         'validators' => 'setValidators',
         'response_values' => 'setResponseValues',
         'notify_on_failure' => 'setNotifyOnFailure',
-        'technical_contact_email_addresses' => 'setTechnicalContactEmailAddresses'
+        'technical_contact_email_addresses' => 'setTechnicalContactEmailAddresses',
+        'allowed_timing' => 'setAllowedTiming'
     ];
 
     /**
@@ -185,7 +189,8 @@ class Webhook implements ModelInterface, ArrayAccess
         'validators' => 'getValidators',
         'response_values' => 'getResponseValues',
         'notify_on_failure' => 'getNotifyOnFailure',
-        'technical_contact_email_addresses' => 'getTechnicalContactEmailAddresses'
+        'technical_contact_email_addresses' => 'getTechnicalContactEmailAddresses',
+        'allowed_timing' => 'getAllowedTiming'
     ];
 
     /**
@@ -229,13 +234,13 @@ class Webhook implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const AUTHENTICATION_TYPE_NONE = 'None';
-    const AUTHENTICATION_TYPE_BASIC = 'Basic';
-    const AUTHENTICATION_TYPE_BEARER = 'Bearer';
-    const HTTP_METHOD_POST = 'Post';
-    const HTTP_METHOD_PUT = 'Put';
-    const HTTP_METHOD_GET = 'Get';
-    const HTTP_METHOD_PATCH = 'Patch';
+    const AUTHENTICATION_TYPE_NONE = 'none';
+    const AUTHENTICATION_TYPE_BASIC = 'basic';
+    const AUTHENTICATION_TYPE_BEARER = 'bearer';
+    const HTTP_METHOD_POST = 'post';
+    const HTTP_METHOD_PUT = 'put';
+    const HTTP_METHOD_GET = 'get';
+    const HTTP_METHOD_PATCH = 'patch';
     const CONTENT_TYPE_APPLICATION_JSON = 'application/json';
     const CONTENT_TYPE_TEXT_XML = 'text/xml';
     const CONTENT_TYPE_TEXT_PLAIN = 'text/plain';
@@ -333,6 +338,7 @@ class Webhook implements ModelInterface, ArrayAccess
         $this->container['response_values'] = isset($data['response_values']) ? $data['response_values'] : null;
         $this->container['notify_on_failure'] = isset($data['notify_on_failure']) ? $data['notify_on_failure'] : null;
         $this->container['technical_contact_email_addresses'] = isset($data['technical_contact_email_addresses']) ? $data['technical_contact_email_addresses'] : null;
+        $this->container['allowed_timing'] = isset($data['allowed_timing']) ? $data['allowed_timing'] : null;
     }
 
     /**
@@ -786,6 +792,31 @@ class Webhook implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
+    /**
+     * Gets allowed_timing
+     *
+     * @return string[]|null
+     */
+    public function getAllowedTiming()
+    {
+        return $this->container['allowed_timing'];
+    }
+
+    /**
+     * Sets allowed_timing
+     *
+     * @param string[]|null $allowed_timing allowed_timing
+     *
+     * @return $this
+     */
+    public function setAllowedTiming($allowed_timing)
+    {
+        $this->container['allowed_timing'] = $allowed_timing;
+
+        return $this;
+    }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
